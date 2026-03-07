@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'subject_screen.dart';
+import 'exam_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+
   const HomeScreen({super.key});
 
   @override
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       body: Container(
+
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -49,6 +51,7 @@ class HomeScreen extends StatelessWidget {
 
               Expanded(
                 child: Container(
+
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.vertical(
@@ -58,6 +61,7 @@ class HomeScreen extends StatelessWidget {
 
                   child: Padding(
                     padding: const EdgeInsets.all(24),
+
                     child: Column(
                       children: [
 
@@ -70,12 +74,14 @@ class HomeScreen extends StatelessWidget {
                           subtitle: "Practice real exam questions",
                           color: Colors.blue,
                           onTap: () {
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => const SubjectScreen(),
+                                builder: (_) => const ExamScreen(),
                               ),
                             );
+
                           },
                         ),
 
@@ -134,12 +140,14 @@ class HomeScreen extends StatelessWidget {
 
     return GestureDetector(
       onTap: onTap,
+
       child: Container(
         padding: const EdgeInsets.all(18),
 
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(18),
+
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.08),
@@ -154,10 +162,12 @@ class HomeScreen extends StatelessWidget {
 
             Container(
               padding: const EdgeInsets.all(14),
+
               decoration: BoxDecoration(
                 color: color.withOpacity(0.15),
                 borderRadius: BorderRadius.circular(12),
               ),
+
               child: Icon(
                 icon,
                 color: color,
