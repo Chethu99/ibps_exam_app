@@ -3,7 +3,10 @@ import '../models/question.dart';
 import '../services/quiz_service.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+
+  final String subject;
+
+  const QuizScreen({super.key, required this.subject});
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -26,7 +29,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void loadQuestions() async {
 
-    questions = await QuizService().fetchQuestions("reasoning");
+    questions = await QuizService().fetchQuestions(widget.subject);
 
     startTimer();
 
