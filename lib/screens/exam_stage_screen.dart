@@ -1,45 +1,41 @@
 import 'package:flutter/material.dart';
-import 'exam_stage_screen.dart';
+import 'subject_screen.dart';
 
-class ExamScreen extends StatelessWidget {
+class ExamStageScreen extends StatelessWidget {
 
-  const ExamScreen({super.key});
+  final String examName;
+
+  const ExamStageScreen({super.key, required this.examName});
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Select Exam"),
+        title: Text(examName),
       ),
 
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
 
-          examTile(context, "RBI Assistant 2026 🔥"),
+          stageTile(context, "Prelims"),
 
-          examTile(context, "IBPS PO"),
-
-          examTile(context, "IBPS Clerk (CSA)"),
-
-          examTile(context, "IBPS SO"),
-
-          examTile(context, "IBPS RRB"),
+          stageTile(context, "Mains"),
 
         ],
       ),
     );
   }
 
-  Widget examTile(BuildContext context, String examName) {
+  Widget stageTile(BuildContext context, String stage) {
 
     return Card(
       margin: const EdgeInsets.only(bottom: 15),
 
       child: ListTile(
         title: Text(
-          examName,
+          stage,
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -53,7 +49,7 @@ class ExamScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (_) => ExamStageScreen(examName: examName),
+              builder: (_) => const SubjectScreen(),
             ),
           );
 

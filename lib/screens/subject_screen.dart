@@ -56,7 +56,11 @@ class SubjectScreen extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 15),
 
       child: ListTile(
-        title: Text(title),
+        title: Text(
+          title,
+          style: const TextStyle(fontSize: 18),
+        ),
+
         trailing: const Icon(Icons.arrow_forward_ios),
 
         onTap: () {
