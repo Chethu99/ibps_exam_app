@@ -25,21 +25,30 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void loadQuestions() async {
-    questions = await QuizService().fetchQuestions();
+
+    questions = await QuizService().fetchQuestions("reasoning");
+
     startTimer();
+
     setState(() {});
   }
 
   void startTimer() {
+
     Future.delayed(const Duration(seconds: 1), () {
+
       if (!mounted) return;
 
       if (seconds > 0) {
+
         setState(() {
           seconds--;
         });
+
         startTimer();
+
       } else {
+
         nextQuestion();
       }
     });

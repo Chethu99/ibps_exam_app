@@ -1,0 +1,24 @@
+{
+ "questions":[
+  {
+   "question":"Pointing to a photograph, Ram said: 'She is the daughter of my grandfather's only son'. How is she related to Ram?",
+   "options":[
+    "Sister",
+    "Mother",
+    "Cousin",
+    "Aunt"
+   ],
+   "answer":"Sister"
+  },
+  {
+   "question":"If SOUTH is coded as TVQUI, how is NORTH coded?",
+   "options":[
+    "OPSUI",
+    "OPSUG",
+    "OQSUH",
+    "OPSUH"
+   ],
+   "answer":"OPSUI"
+  }
+ ]
+}
