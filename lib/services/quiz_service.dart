@@ -6,9 +6,9 @@ class QuizService {
 
   Future<List<Question>> fetchQuestions(String subject) async {
 
-    final url = Uri.parse(
-      "https://raw.githubusercontent.com/Chethu99/ibps_exam_app/refs/heads/main/question_bank/questions/reasoning.json"
-    );
+   final url = Uri.parse(
+  "https://raw.githubusercontent.com/Chethu99/ibps_exam_app/main/question_bank/questions/$subject.json"
+);
 
     final response = await http.get(url);
 

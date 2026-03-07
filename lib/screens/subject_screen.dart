@@ -18,7 +18,32 @@ class SubjectScreen extends StatelessWidget {
         children: [
 
           subjectTile(context, "Reasoning", "reasoning"),
+
           subjectTile(context, "English", "english"),
+
+          subjectTile(
+            context,
+            "Quantitative Aptitude",
+            "quantitative_aptitude",
+          ),
+
+          subjectTile(
+            context,
+            "Computer Awareness",
+            "computer_awareness",
+          ),
+
+          subjectTile(
+            context,
+            "General Awareness",
+            "general_awareness",
+          ),
+
+          subjectTile(
+            context,
+            "Current Affairs",
+            "current_affairs",
+          ),
 
         ],
       ),
@@ -35,12 +60,14 @@ class SubjectScreen extends StatelessWidget {
         trailing: const Icon(Icons.arrow_forward_ios),
 
         onTap: () {
+
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (_) => QuizScreen(subject: subject),
             ),
           );
+
         },
       ),
     );
