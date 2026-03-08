@@ -1,0 +1,198 @@
+{
+ "questions":[
+  {
+   "question":"Choose the synonym of 'Rapid'.",
+   "options":["Slow","Fast","Weak","Calm"],
+   "answer":"Fast",
+   "explanation":"Rapid means happening quickly; the closest synonym is Fast."
+  },
+  {
+   "question":"Choose the antonym of 'Ancient'.",
+   "options":["Old","Modern","Historic","Past"],
+   "answer":"Modern",
+   "explanation":"Ancient refers to something very old; its opposite is Modern."
+  },
+  {
+   "question":"Choose the correct spelling.",
+   "options":["Accomodate","Accommodate","Acommodate","Acomodate"],
+   "answer":"Accommodate",
+   "explanation":"The correct spelling is Accommodate with double 'c' and double 'm'."
+  },
+  {
+   "question":"Fill in the blank: She ___ going to the market.",
+   "options":["is","are","were","be"],
+   "answer":"is",
+   "explanation":"The subject 'She' requires the singular verb 'is'."
+  },
+  {
+   "question":"Choose the synonym of 'Happy'.",
+   "options":["Sad","Joyful","Angry","Tired"],
+   "answer":"Joyful",
+   "explanation":"Joyful means feeling great happiness."
+  },
+  {
+   "question":"Choose the antonym of 'Increase'.",
+   "options":["Expand","Reduce","Grow","Add"],
+   "answer":"Reduce",
+   "explanation":"Reduce means to make smaller, opposite of Increase."
+  },
+  {
+   "question":"Fill in the blank: They ___ playing cricket.",
+   "options":["is","are","was","be"],
+   "answer":"are",
+   "explanation":"'They' is plural, so the correct helping verb is 'are'."
+  },
+  {
+   "question":"Choose the synonym of 'Brave'.",
+   "options":["Coward","Bold","Weak","Timid"],
+   "answer":"Bold",
+   "explanation":"Bold means showing courage, similar to Brave."
+  },
+  {
+   "question":"Choose the antonym of 'Victory'.",
+   "options":["Success","Triumph","Defeat","Win"],
+   "answer":"Defeat",
+   "explanation":"Victory means winning; its opposite is Defeat."
+  },
+  {
+   "question":"Fill in the blank: He ___ finished his work.",
+   "options":["has","have","were","are"],
+   "answer":"has",
+   "explanation":"'He' is singular and uses 'has' in present perfect tense."
+  },
+
+  {
+   "question":"Choose the synonym of 'Begin'.",
+   "options":["End","Start","Close","Stop"],
+   "answer":"Start",
+   "explanation":"Begin and Start have the same meaning."
+  },
+  {
+   "question":"Choose the antonym of 'Rich'.",
+   "options":["Wealthy","Poor","Prosperous","Affluent"],
+   "answer":"Poor",
+   "explanation":"Poor is the opposite of Rich."
+  },
+  {
+   "question":"Fill in the blank: I ___ a book yesterday.",
+   "options":["buy","bought","buying","buys"],
+   "answer":"bought",
+   "explanation":"Yesterday indicates past tense, so 'bought' is correct."
+  },
+  {
+   "question":"Choose the synonym of 'Quick'.",
+   "options":["Slow","Rapid","Weak","Late"],
+   "answer":"Rapid",
+   "explanation":"Rapid means happening quickly."
+  },
+  {
+   "question":"Choose the antonym of 'Strong'.",
+   "options":["Powerful","Weak","Firm","Solid"],
+   "answer":"Weak",
+   "explanation":"Weak is the opposite of Strong."
+  },
+
+  {
+   "question":"Fill in the blank: She ___ to school every day.",
+   "options":["go","goes","going","gone"],
+   "answer":"goes",
+   "explanation":"Third person singular requires 'goes'."
+  },
+  {
+   "question":"Choose the synonym of 'Big'.",
+   "options":["Tiny","Large","Small","Little"],
+   "answer":"Large",
+   "explanation":"Large means big in size."
+  },
+  {
+   "question":"Choose the antonym of 'Hot'.",
+   "options":["Warm","Cool","Cold","Boiling"],
+   "answer":"Cold",
+   "explanation":"Cold is opposite of Hot."
+  },
+  {
+   "question":"Fill in the blank: They ___ finished their lunch.",
+   "options":["has","have","had","is"],
+   "answer":"have",
+   "explanation":"Plural subject 'They' takes 'have'."
+  },
+  {
+   "question":"Choose the synonym of 'Smart'.",
+   "options":["Intelligent","Lazy","Slow","Weak"],
+   "answer":"Intelligent",
+   "explanation":"Smart means intelligent."
+  },
+
+  {
+   "question":"Choose the antonym of 'Early'.",
+   "options":["Late","Soon","Fast","Quick"],
+   "answer":"Late",
+   "explanation":"Late is the opposite of Early."
+  },
+  {
+   "question":"Fill in the blank: He ___ playing football.",
+   "options":["is","are","were","be"],
+   "answer":"is",
+   "explanation":"Singular subject 'He' takes 'is'."
+  },
+  {
+   "question":"Choose the synonym of 'Angry'.",
+   "options":["Happy","Calm","Furious","Joyful"],
+   "answer":"Furious",
+   "explanation":"Furious means very angry."
+  },
+  {
+   "question":"Choose the antonym of 'Tall'.",
+   "options":["High","Short","Big","Long"],
+   "answer":"Short",
+   "explanation":"Short is the opposite of Tall."
+  },
+  {
+   "question":"Fill in the blank: We ___ watching a movie.",
+   "options":["is","are","was","be"],
+   "answer":"are",
+   "explanation":"'We' is plural and uses 'are'."
+  },
+
+  {
+   "question":"Choose the synonym of 'Clean'.",
+   "options":["Dirty","Pure","Messy","Dusty"],
+   "answer":"Pure",
+   "explanation":"Pure can mean free from dirt or impurities."
+  },
+  {
+   "question":"Choose the antonym of 'Open'.",
+   "options":["Start","Close","Begin","Unlock"],
+   "answer":"Close",
+   "explanation":"Close is opposite of Open."
+  },
+
+  {
+   "question":"Fill in the blank: She ___ tea every morning.",
+   "options":["drink","drinks","drank","drinking"],
+   "answer":"drinks",
+   "explanation":"Third person singular requires 'drinks'."
+  },
+  {
+   "question":"Choose the synonym of 'Fear'.",
+   "options":["Courage","Terror","Bravery","Strength"],
+   "answer":"Terror",
+   "explanation":"Terror means extreme fear."
+  },
+
+  {
+   "question":"Choose the antonym of 'Win'.",
+   "options":["Victory","Defeat","Success","Triumph"],
+   "answer":"Defeat",
+   "explanation":"Defeat means to lose."
+  },
+
+  {
+   "question":"Fill in the blank: I ___ finished my homework.",
+   "options":["has","have","had","is"],
+   "answer":"have",
+   "explanation":"'I' uses 'have' in present perfect."
+  }
+
+ ]
+}

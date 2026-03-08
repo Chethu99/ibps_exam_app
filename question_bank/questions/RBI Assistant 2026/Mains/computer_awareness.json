@@ -1,0 +1,184 @@
+{
+ "questions":[
+  {
+   "question":"Which scheduling algorithm may cause starvation?",
+   "options":["First Come First Serve","Round Robin","Shortest Job First","Priority Scheduling"],
+   "answer":"Priority Scheduling",
+   "explanation":"In priority scheduling, lower priority processes may never execute if higher priority processes keep arriving, causing starvation."
+  },
+  {
+   "question":"Which layer of the OSI model is responsible for encryption?",
+   "options":["Transport Layer","Session Layer","Presentation Layer","Application Layer"],
+   "answer":"Presentation Layer",
+   "explanation":"The Presentation layer handles encryption, compression, and data formatting."
+  },
+  {
+   "question":"Which data structure works on FIFO principle?",
+   "options":["Stack","Queue","Tree","Graph"],
+   "answer":"Queue",
+   "explanation":"Queue follows First In First Out (FIFO) order."
+  },
+  {
+   "question":"Which protocol is used for secure web communication?",
+   "options":["HTTP","FTP","HTTPS","SMTP"],
+   "answer":"HTTPS",
+   "explanation":"HTTPS encrypts HTTP communication using SSL/TLS."
+  },
+  {
+   "question":"Which memory is volatile?",
+   "options":["ROM","RAM","Hard Disk","SSD"],
+   "answer":"RAM",
+   "explanation":"RAM loses its contents when power is turned off."
+  },
+  {
+   "question":"Which SQL command is used to remove a table structure completely?",
+   "options":["DELETE","DROP","REMOVE","TRUNCATE"],
+   "answer":"DROP",
+   "explanation":"DROP removes the entire table structure from the database."
+  },
+  {
+   "question":"Which of the following is a NoSQL database?",
+   "options":["MySQL","PostgreSQL","MongoDB","Oracle"],
+   "answer":"MongoDB",
+   "explanation":"MongoDB is a document-based NoSQL database."
+  },
+  {
+   "question":"Which component performs arithmetic and logical operations?",
+   "options":["Control Unit","ALU","Cache","Register"],
+   "answer":"ALU",
+   "explanation":"Arithmetic Logic Unit (ALU) performs arithmetic and logical operations."
+  },
+  {
+   "question":"Which topology connects all devices to a central hub?",
+   "options":["Bus","Star","Ring","Mesh"],
+   "answer":"Star",
+   "explanation":"In star topology, all nodes connect to a central hub."
+  },
+  {
+   "question":"Which port does HTTPS use by default?",
+   "options":["80","443","21","25"],
+   "answer":"443",
+   "explanation":"HTTPS uses port 443 for secure communication."
+  },
+  {
+   "question":"Which key is used to uniquely identify a record in a database table?",
+   "options":["Foreign Key","Primary Key","Composite Key","Unique Key"],
+   "answer":"Primary Key",
+   "explanation":"A primary key uniquely identifies each record in a table."
+  },
+  {
+   "question":"Which algorithm is used for public-key encryption?",
+   "options":["RSA","DES","AES","MD5"],
+   "answer":"RSA",
+   "explanation":"RSA is a widely used public-key cryptography algorithm."
+  },
+  {
+   "question":"Which layer of TCP/IP corresponds to the OSI Transport layer?",
+   "options":["Network Interface","Internet","Transport","Application"],
+   "answer":"Transport",
+   "explanation":"The TCP/IP Transport layer performs the same function as the OSI Transport layer."
+  },
+  {
+   "question":"Which device forwards packets between networks?",
+   "options":["Switch","Hub","Router","Bridge"],
+   "answer":"Router",
+   "explanation":"Routers forward packets between different networks."
+  },
+  {
+   "question":"Which normal form removes transitive dependency?",
+   "options":["1NF","2NF","3NF","BCNF"],
+   "answer":"3NF",
+   "explanation":"Third Normal Form removes transitive dependencies."
+  },
+  {
+   "question":"Which command is used to create a table in SQL?",
+   "options":["INSERT","CREATE","ADD","MAKE"],
+   "answer":"CREATE",
+   "explanation":"CREATE TABLE is used to create a table structure."
+  },
+  {
+   "question":"Which sorting algorithm has the best average-case time complexity?",
+   "options":["Bubble Sort","Selection Sort","Merge Sort","Insertion Sort"],
+   "answer":"Merge Sort",
+   "explanation":"Merge sort has O(n log n) average time complexity."
+  },
+  {
+   "question":"Which HTTP method is used to retrieve data from a server?",
+   "options":["POST","PUT","GET","DELETE"],
+   "answer":"GET",
+   "explanation":"GET is used to retrieve data from a server."
+  },
+  {
+   "question":"Which type of malware replicates itself automatically?",
+   "options":["Trojan","Spyware","Worm","Adware"],
+   "answer":"Worm",
+   "explanation":"Worms replicate themselves across networks without user intervention."
+  },
+  {
+   "question":"Which file system is commonly used in Linux?",
+   "options":["NTFS","FAT32","EXT4","HFS+"],
+   "answer":"EXT4",
+   "explanation":"EXT4 is a widely used Linux file system."
+  },
+  {
+   "question":"Which device operates at Layer 2 of the OSI model?",
+   "options":["Router","Switch","Gateway","Repeater"],
+   "answer":"Switch",
+   "explanation":"Switches operate at the Data Link layer."
+  },
+  {
+   "question":"Which protocol is used for sending email?",
+   "options":["SMTP","POP3","HTTP","SNMP"],
+   "answer":"SMTP",
+   "explanation":"SMTP is used for sending email."
+  },
+  {
+   "question":"Which DNS record maps a domain name to an IPv4 address?",
+   "options":["CNAME","MX","A","TXT"],
+   "answer":"A",
+   "explanation":"A records map domain names to IPv4 addresses."
+  },
+  {
+   "question":"Which memory is closest to the CPU?",
+   "options":["RAM","Cache","Hard Disk","SSD"],
+   "answer":"Cache",
+   "explanation":"Cache memory is located closest to the CPU for fast access."
+  },
+  {
+   "question":"Which programming paradigm does Java primarily follow?",
+   "options":["Procedural","Object-Oriented","Functional","Logical"],
+   "answer":"Object-Oriented",
+   "explanation":"Java is primarily an object-oriented programming language."
+  },
+  {
+   "question":"Which protocol assigns IP addresses automatically?",
+   "options":["DNS","DHCP","FTP","SNMP"],
+   "answer":"DHCP",
+   "explanation":"DHCP dynamically assigns IP addresses to devices."
+  },
+  {
+   "question":"Which hashing algorithm is considered insecure today?",
+   "options":["SHA-256","SHA-3","MD5","SHA-512"],
+   "answer":"MD5",
+   "explanation":"MD5 is vulnerable to collision attacks and is no longer considered secure."
+  },
+  {
+   "question":"Which Linux command displays the current directory?",
+   "options":["ls","pwd","cd","dir"],
+   "answer":"pwd",
+   "explanation":"pwd stands for Print Working Directory."
+  },
+  {
+   "question":"Which cloud service model provides virtual machines?",
+   "options":["SaaS","PaaS","IaaS","DaaS"],
+   "answer":"IaaS",
+   "explanation":"Infrastructure as a Service provides virtual machines and infrastructure."
+  },
+  {
+   "question":"Which algorithm is commonly used in blockchain mining?",
+   "options":["SHA-256","AES","RSA","DES"],
+   "answer":"SHA-256",
+   "explanation":"Bitcoin mining uses SHA-256 hashing."
+  }
+ ]
+}

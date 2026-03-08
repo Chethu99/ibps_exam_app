@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "competitive-exams-4d416",
+  "private_key_id": "71bfeff782a20667bece48650fa4b6b6e0ec361e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDaGf2ViW5zRCfu\ngD183csVspGESD0OOqKTccX28ACd+aRBFUshUuJYuuFnPCrxBT0xKpaPKrrCE0gt\n/QKfQMBSj1bentizb3YH1EHw6Az6Rjs9FvIID411MRUd5JZfcwtS1tKwFdHWojNF\n+bGqIzw1/ABexHqzi+T2vsPSgWG66caN15ls5FWsfCVHNFCWH6tTeZRAi7AXrr1D\nIkmHLV/adk0zs+QaYOVLHfGEgWKQqwSM1QepV9s1CcYeZiP6mtROFGjMpSPvxjJb\n3QvO26TtsrSq5FcpVe5JmzViUEsIS/8dhaKEbL362BWS1Fye8PApgauHwK2VCy3F\nOtx6d5iRAgMBAAECggEAFH1umnbf3opfqgN4Q1ve8XnmO+RBgC24Clwc+hcQJ8dF\nTCwA8++Cfk2IUZeQfTY9ynmyzV55TzRaip+DeIyvxNHcmmuX9juZfiDN1SEn3vds\nJ1AZivJTGthyoG1SR0Nao/y0rIBQR3bTlFZh/5bx2CyFqGGTGX0iFKBVa1hmYxXY\n6vl1yHVI4q1Qd8V1HiLhBPp/VC+ghSeA5YMXkFthlLHua+/RlFU6HaPZnOGiVUI2\nO18Jukq4ypneGgYzhdNIlg5/DJYLoLESf/AxrGzK/eZBtCaq3wQzr3uCUuh6cZ1z\n4PQu5YqbPdW0R8/YnOXZ/BCu/hj4f8kL1GQUn+SUpQKBgQD7SvLX1QmSxXudDUvP\n3p7OkLqNQ1sRJziPul97eoFxFKvtjdLR58iLwh5E7GHx69XSRuK5fk40AspUQuQi\n2cR0HScMNLOAKljYin+CLCFMBi2meZ4+0jEdXly8xwmf3GQTOFOaU/5QsIcfNqZT\nbn+KXESJFvpTjyulKZSqgPubcwKBgQDeL+Bb5SWBauGiFaeaY0PcJJnX2hluokrv\nFRbqWI4U8E3h1hm4rCM+2N9wsMTKICyTC08wInQsm98z05hkgA+HgqrfetW7RirR\nJfL80xCFx9OSj+Q3yXtv2IaI+KDhOEz6jkB3TISDpCuJZwbPPTrZ7zjuxG7DGjlc\nDx3w8lMC6wKBgQCEyLfFgJbMbXnCJTJ4JsR3llZdKshGKhljKTInBza60BeBMT3D\nGN0JrIteFCI1OU8FC9vl9G3SYd8T4zy1haifSoBFnNt0z+uekKCL4lG94E3i98S8\noUi+ogwS3IGjbUucNFlI5TUu4fikb7Y3w920+MhmQDQKT07auTwLVJifLQKBgQCF\nEv+5imEQRkeloHqlyVZXf8R0t7gLv0BKOcNj0G4otFSxMl5tcQwbFCGfiQAUX3jT\nCS8AkWIrZaAlllHrv5eNfgGBoDxq0ffLFIOYUYHP3oMlgPEbSJ2Zu4G4f9E7k1Dn\nsFOEIFwtzCIXRZGahf29kb3zo8sDJ627KYKxUTHOyQKBgQC45kfn0nhoXzqrjoaV\n0JxHUKaFYKnVmbWbeu3/KtpjW9Doj0Xoz1BOl5wQKUyLdoW8zlfR6atGNdHXDvxo\n+TBLNfB7ar1gdaz/l3Ky3NO1W6g89BAotLgnWPQFE0b98ADgKkCiEcaqoKdIr2KG\ni7k6UyqNFQpOqa27xcISLJSfwA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@competitive-exams-4d416.iam.gserviceaccount.com",
+  "client_id": "110181910467750673001",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40competitive-exams-4d416.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

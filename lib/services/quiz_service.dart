@@ -1,27 +1,46 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import '../models/question.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuizService {
 
-  Future<List<Question>> fetchQuestions(String subject) async {
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-   final url = Uri.parse(
-  "https://raw.githubusercontent.com/Chethu99/ibps_exam_app/main/question_bank/questions/$subject.json"
-);
+  Future<List<Map<String, dynamic>>> fetchQuestions({
+    required String exam,
+    required String stage,
+    required String subject,
+  }) async {
 
-    final response = await http.get(url);
+    try {
 
-    if (response.statusCode != 200) {
-      throw Exception("Failed to load questions");
+      final querySnapshot = await _firestore
+          .collection("Questions")
+          .where("exam", isEqualTo: exam)
+          .where("stage", isEqualTo: stage)
+          .where("subject", isEqualTo: subject)
+          .get();
+
+      final questions = querySnapshot.docs.map((doc) {
+
+        final data = doc.data();
+
+        return {
+          "question": data["question"],
+          "options": List<String>.from(data["options"]),
+          "answer": data["answer"],
+          "explanation": data["explanation"]
+        };
+
+      }).toList();
+
+      return questions;
+
+    } catch (e) {
+
+      print("Error fetching questions: $e");
+      return [];
+
     }
 
-    final data = jsonDecode(response.body);
-
-    List<Question> questions = (data["questions"] as List)
-        .map((q) => Question.fromJson(q))
-        .toList();
-
-    return questions;
   }
+
 }

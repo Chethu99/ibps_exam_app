@@ -1,0 +1,188 @@
+{
+ "questions":[
+  {
+   "question":"What is 20% of 500?",
+   "options":["50","80","100","120"],
+   "answer":"100",
+   "explanation":"20% means 20/100. (20/100) × 500 = 100."
+  },
+  {
+   "question":"The average of 10, 20 and 30 is:",
+   "options":["15","20","25","30"],
+   "answer":"20",
+   "explanation":"Average = (10 + 20 + 30) / 3 = 60 / 3 = 20."
+  },
+  {
+   "question":"Find the next number: 2, 4, 8, 16, ?",
+   "options":["20","24","32","30"],
+   "answer":"32",
+   "explanation":"Each number is multiplied by 2."
+  },
+  {
+   "question":"If the cost price is ₹200 and selling price is ₹250, what is the profit?",
+   "options":["40","50","60","30"],
+   "answer":"50",
+   "explanation":"Profit = SP − CP = 250 − 200 = 50."
+  },
+  {
+   "question":"If 5 workers complete a job in 10 days, how many days will 10 workers take?",
+   "options":["5","10","15","20"],
+   "answer":"5",
+   "explanation":"More workers mean less time. Work halves → 5 days."
+  },
+  {
+   "question":"What is 25% of 200?",
+   "options":["25","40","50","60"],
+   "answer":"50",
+   "explanation":"25% = 1/4. One-fourth of 200 is 50."
+  },
+  {
+   "question":"Find the next number: 5, 10, 15, 20, ?",
+   "options":["22","25","30","28"],
+   "answer":"25",
+   "explanation":"Numbers increase by 5."
+  },
+  {
+   "question":"A train travels 60 km in 1 hour. What is its speed?",
+   "options":["50 km/h","60 km/h","70 km/h","80 km/h"],
+   "answer":"60 km/h",
+   "explanation":"Speed = Distance / Time = 60 / 1 = 60 km/h."
+  },
+  {
+   "question":"What is 10% of 900?",
+   "options":["80","90","100","110"],
+   "answer":"90",
+   "explanation":"10% of 900 = 90."
+  },
+  {
+   "question":"If a product costs ₹500 and the discount is ₹50, what is the selling price?",
+   "options":["450","460","470","480"],
+   "answer":"450",
+   "explanation":"Selling price = 500 − 50 = 450."
+  },
+
+  {
+   "question":"The average of 4, 6, 8, 10 is:",
+   "options":["6","7","8","9"],
+   "answer":"7",
+   "explanation":"Average = (4+6+8+10)/4 = 28/4 = 7."
+  },
+  {
+   "question":"Find the next number: 3, 6, 12, 24, ?",
+   "options":["30","36","48","60"],
+   "answer":"48",
+   "explanation":"Each number doubles."
+  },
+  {
+   "question":"What is 50% of 300?",
+   "options":["100","120","150","180"],
+   "answer":"150",
+   "explanation":"50% means half → 300/2 = 150."
+  },
+  {
+   "question":"If a man walks 5 km in 1 hour, how far will he walk in 4 hours?",
+   "options":["10","15","20","25"],
+   "answer":"20",
+   "explanation":"Distance = Speed × Time = 5 × 4 = 20 km."
+  },
+  {
+   "question":"What is the simple interest on ₹1000 at 10% per year for 2 years?",
+   "options":["100","200","300","400"],
+   "answer":"200",
+   "explanation":"SI = (P × R × T)/100 = (1000×10×2)/100 = 200."
+  },
+
+  {
+   "question":"Find the next number: 7, 14, 21, ?",
+   "options":["24","28","30","35"],
+   "answer":"28",
+   "explanation":"Numbers increase by 7."
+  },
+  {
+   "question":"If CP = 300 and SP = 330, profit percentage is:",
+   "options":["5%","10%","15%","20%"],
+   "answer":"10%",
+   "explanation":"Profit = 30. Profit % = (30/300)*100 = 10%."
+  },
+  {
+   "question":"What is 15% of 200?",
+   "options":["20","25","30","35"],
+   "answer":"30",
+   "explanation":"15% of 200 = 30."
+  },
+  {
+   "question":"Find the next number: 1, 4, 9, 16, ?",
+   "options":["20","25","30","36"],
+   "answer":"25",
+   "explanation":"Square numbers: 1²,2²,3²,4²,5²."
+  },
+  {
+   "question":"A shopkeeper sells an item for ₹120 which cost ₹100. Profit is:",
+   "options":["10","20","30","40"],
+   "answer":"20",
+   "explanation":"Profit = SP − CP = 120 − 100."
+  },
+
+  {
+   "question":"Average of 5,10,15,20,25 is:",
+   "options":["10","15","20","25"],
+   "answer":"15",
+   "explanation":"Sum=75. Average=75/5=15."
+  },
+  {
+   "question":"Find the next number: 2, 6, 18, ?",
+   "options":["36","54","72","108"],
+   "answer":"54",
+   "explanation":"Multiply by 3 each time."
+  },
+  {
+   "question":"What is 30% of 500?",
+   "options":["120","130","150","180"],
+   "answer":"150",
+   "explanation":"30% × 500 = 150."
+  },
+  {
+   "question":"Distance = 120 km, Time = 2 hours. Speed?",
+   "options":["40","50","60","70"],
+   "answer":"60",
+   "explanation":"Speed = Distance/Time = 120/2 = 60."
+  },
+  {
+   "question":"Find next: 4, 8, 12, 16, ?",
+   "options":["18","20","22","24"],
+   "answer":"20",
+   "explanation":"Increase by 4."
+  },
+
+  {
+   "question":"What is 5% of 1000?",
+   "options":["20","30","40","50"],
+   "answer":"50",
+   "explanation":"5% of 1000 = 50."
+  },
+  {
+   "question":"If a man earns ₹500 per day, earnings in 5 days?",
+   "options":["2000","2500","3000","3500"],
+   "answer":"2500",
+   "explanation":"500 × 5 = 2500."
+  },
+  {
+   "question":"Find next: 9, 18, 27, ?",
+   "options":["30","36","45","54"],
+   "answer":"36",
+   "explanation":"Increase by 9."
+  },
+  {
+   "question":"A car travels 80 km in 2 hours. Speed?",
+   "options":["30","40","50","60"],
+   "answer":"40",
+   "explanation":"Speed = 80 / 2 = 40 km/h."
+  },
+  {
+   "question":"What is 40% of 250?",
+   "options":["80","90","100","110"],
+   "answer":"100",
+   "explanation":"40% × 250 = 100."
+  }
+ ]
+}

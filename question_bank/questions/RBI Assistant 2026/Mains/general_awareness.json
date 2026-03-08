@@ -1,0 +1,126 @@
+{
+ "questions":[
+  {
+   "question":"Who is the current Governor of the Reserve Bank of India (RBI) in 2026?",
+   "options":["Shaktikanta Das","Urjit Patel","Raghuram Rajan","Nirmala Sitharaman"],
+   "answer":"Shaktikanta Das",
+   "explanation":"Shaktikanta Das continues to serve as the Governor of the Reserve Bank of India."
+  },
+  {
+   "question":"Union Budget 2026 was presented by which Indian minister?",
+   "options":["Rajnath Singh","Nirmala Sitharaman","Piyush Goyal","Amit Shah"],
+   "answer":"Nirmala Sitharaman",
+   "explanation":"The Union Budget of India is presented by the Finance Minister, Nirmala Sitharaman."
+  },
+  {
+   "question":"Which institution regulates monetary policy in India?",
+   "options":["SEBI","RBI","NABARD","IRDAI"],
+   "answer":"RBI",
+   "explanation":"The Reserve Bank of India regulates monetary policy and controls money supply."
+  },
+  {
+   "question":"Which payment system is developed by the National Payments Corporation of India (NPCI)?",
+   "options":["UPI","SWIFT","PayPal","Visa"],
+   "answer":"UPI",
+   "explanation":"UPI (Unified Payments Interface) is developed by NPCI to enable instant bank transfers."
+  },
+  {
+   "question":"Which organization releases the Global Economic Outlook reports?",
+   "options":["World Bank","UNESCO","WHO","UNICEF"],
+   "answer":"World Bank",
+   "explanation":"The World Bank publishes global economic outlook and development reports."
+  },
+  {
+   "question":"Which country hosted the G20 Summit in 2023?",
+   "options":["USA","India","Japan","France"],
+   "answer":"India",
+   "explanation":"India hosted the G20 Summit in New Delhi in September 2023."
+  },
+  {
+   "question":"What does the 'M' in MSME stand for?",
+   "options":["Medium","Micro","Manufacturing","Market"],
+   "answer":"Micro",
+   "explanation":"MSME stands for Micro, Small and Medium Enterprises."
+  },
+  {
+   "question":"Which bank introduced the Lead Bank Scheme in India?",
+   "options":["RBI","SBI","NABARD","SEBI"],
+   "answer":"RBI",
+   "explanation":"The RBI introduced the Lead Bank Scheme to improve banking services in districts."
+  },
+  {
+   "question":"Which digital payment platform is owned by NPCI?",
+   "options":["UPI","Google Pay","Paytm","PhonePe"],
+   "answer":"UPI",
+   "explanation":"UPI infrastructure is developed and managed by NPCI."
+  },
+  {
+   "question":"Which ministry launched the 'PM Vishwakarma Scheme' in India?",
+   "options":["Finance Ministry","Ministry of MSME","Ministry of Education","Ministry of Defence"],
+   "answer":"Ministry of MSME",
+   "explanation":"PM Vishwakarma Scheme supports traditional artisans and craftsmen."
+  },
+
+  {
+   "question":"What is India's central bank called?",
+   "options":["State Bank of India","Reserve Bank of India","National Bank of India","Central Bank of India"],
+   "answer":"Reserve Bank of India",
+   "explanation":"RBI is India's central bank responsible for monetary regulation."
+  },
+  {
+   "question":"Which body regulates stock markets in India?",
+   "options":["RBI","SEBI","IRDAI","NABARD"],
+   "answer":"SEBI",
+   "explanation":"SEBI regulates securities markets and protects investors."
+  },
+  {
+   "question":"Which scheme aims to provide financial inclusion through bank accounts?",
+   "options":["PMJDY","PMAY","PMGSY","PMFBY"],
+   "answer":"PMJDY",
+   "explanation":"Pradhan Mantri Jan Dhan Yojana promotes financial inclusion."
+  },
+  {
+   "question":"Which organization manages India's foreign exchange reserves?",
+   "options":["Finance Ministry","RBI","SEBI","NITI Aayog"],
+   "answer":"RBI",
+   "explanation":"RBI manages India's forex reserves."
+  },
+  {
+   "question":"Which international organization is headquartered in Washington D.C.?",
+   "options":["IMF","WHO","UNICEF","UNESCO"],
+   "answer":"IMF",
+   "explanation":"International Monetary Fund headquarters is in Washington D.C."
+  },
+
+  {
+   "question":"Which bank launched India's first floating rate savings bond?",
+   "options":["SBI","RBI","NABARD","SEBI"],
+   "answer":"RBI",
+   "explanation":"RBI issues floating rate savings bonds on behalf of the Government of India."
+  },
+  {
+   "question":"Which Indian state launched the 'Mukhyamantri Gramin Awas Yojana 2.0' recently?",
+   "options":["Punjab","Haryana","Gujarat","Maharashtra"],
+   "answer":"Haryana",
+   "explanation":"The scheme in Haryana focuses on rural housing development. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+   "question":"Which system is used for international bank transfers?",
+   "options":["UPI","SWIFT","IMPS","NEFT"],
+   "answer":"SWIFT",
+   "explanation":"SWIFT is used globally for international financial transactions."
+  },
+  {
+   "question":"Which bank is known as the 'Bankers Bank' in India?",
+   "options":["SBI","RBI","NABARD","SEBI"],
+   "answer":"RBI",
+   "explanation":"RBI acts as the banker to other banks."
+  },
+  {
+   "question":"Which authority proposed stronger rules for digital banking fraud protection recently?",
+   "options":["SEBI","RBI","IMF","World Bank"],
+   "answer":"RBI",
+   "explanation":"RBI proposed enhanced consumer protection and faster complaint resolution for digital fraud cases. :contentReference[oaicite:2]{index=2}"
+  }
+ ]
+}

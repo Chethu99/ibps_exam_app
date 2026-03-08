@@ -1,124 +1,104 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'exam_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
       body: Container(
-
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Color(0xff1e3c72),
-              Color(0xff2a5298),
-            ],
+            colors: [Color(0xff1e3c72), Color(0xff2a5298)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
         ),
-
         child: SafeArea(
           child: Column(
             children: [
-
-              const SizedBox(height: 30),
-
-              const Text(
-                "IBPS Prep",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const SizedBox(height: 10),
-
-              const Text(
-                "Prepare for IBPS & Govt Exams",
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 16,
-                ),
-              ),
-
-              const SizedBox(height: 40),
-
-              Expanded(
-                child: Container(
-
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(40),
-                    ),
-                  ),
-
-                  child: Padding(
-                    padding: const EdgeInsets.all(24),
-
-                    child: Column(
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        const SizedBox(height: 20),
-
-                        buildCard(
-                          context,
-                          icon: Icons.quiz,
-                          title: "Mock Tests",
-                          subtitle: "Practice real exam questions",
-                          color: Colors.blue,
-                          onTap: () {
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const ExamScreen(),
-                              ),
-                            );
-
-                          },
+                        Text(
+                          "Hi, ${user?.displayName?.split(' ')[0] ?? 'User'}",
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold),
                         ),
-
-                        const SizedBox(height: 20),
-
-                        buildCard(
-                          context,
-                          icon: Icons.menu_book,
-                          title: "Study Notes",
-                          subtitle: "Important exam notes",
-                          color: Colors.orange,
-                          onTap: () {},
-                        ),
-
-                        const SizedBox(height: 20),
-
-                        buildCard(
-                          context,
-                          icon: Icons.trending_up,
-                          title: "Daily Quiz",
-                          subtitle: "Improve your accuracy daily",
-                          color: Colors.green,
-                          onTap: () {},
-                        ),
-
-                        const SizedBox(height: 20),
-
-                        buildCard(
-                          context,
-                          icon: Icons.leaderboard,
-                          title: "Leaderboard",
-                          subtitle: "Compare with other students",
-                          color: Colors.purple,
-                          onTap: () {},
-                        ),
+                        const Text("Ready to study?",
+                            style: TextStyle(color: Colors.white70)),
                       ],
                     ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(40)),
+                  ),
+                  child: ListView(
+                    padding: const EdgeInsets.all(24),
+                    children: [
+                      _buildMenuCard(
+                        context,
+                        title: "Upcoming Exams",
+                        icon: Icons.quiz,
+                        color: Colors.blue,
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const ExamScreen()),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 20),
+                      _buildMenuCard(context,
+                          title: "Study Notes",
+                          icon: Icons.menu_book,
+                          color: Colors.orange,
+                          onTap: () {}),
+                      const SizedBox(height: 20),
+                      _buildMenuCard(context,
+                          title: "Daily Quiz",
+                          icon: Icons.trending_up,
+                          color: Colors.green,
+                          onTap: () {}),
+                      const SizedBox(height: 20),
+                      _buildMenuCard(context,
+                          title: "Leaderboard",
+                          icon: Icons.leaderboard,
+                          color: Colors.purple,
+                          onTap: () {}),
+                      const SizedBox(height: 40),
+                      const Divider(),
+                      ListTile(
+                        leading:
+                            const Icon(Icons.logout, color: Colors.redAccent),
+                        title: const Text("Logout",
+                            style: TextStyle(
+                                color: Colors.redAccent,
+                                fontWeight: FontWeight.bold)),
+                        onTap: () async {
+                          await GoogleSignIn().signOut();
+                          await FirebaseAuth.instance.signOut();
+                        },
+                      ),
+                    ],
                   ),
                 ),
               )
@@ -129,82 +109,21 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildCard(
-    BuildContext context, {
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required Color color,
-    required VoidCallback onTap,
-  }) {
-
-    return GestureDetector(
-      onTap: onTap,
-
-      child: Container(
-        padding: const EdgeInsets.all(18),
-
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(18),
-
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.08),
-              blurRadius: 10,
-              offset: const Offset(0, 5),
-            )
-          ],
-        ),
-
-        child: Row(
-          children: [
-
-            Container(
-              padding: const EdgeInsets.all(14),
-
-              decoration: BoxDecoration(
-                color: color.withOpacity(0.15),
-                borderRadius: BorderRadius.circular(12),
-              ),
-
-              child: Icon(
-                icon,
-                color: color,
-                size: 30,
-              ),
-            ),
-
-            const SizedBox(width: 18),
-
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                const SizedBox(height: 4),
-
-                Text(
-                  subtitle,
-                  style: TextStyle(
-                    color: Colors.grey[600],
-                  ),
-                ),
-              ],
-            ),
-
-            const Spacer(),
-
-            const Icon(Icons.arrow_forward_ios, size: 18)
-          ],
-        ),
+  Widget _buildMenuCard(BuildContext context,
+      {required String title,
+      required IconData icon,
+      required Color color,
+      required VoidCallback onTap}) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      child: ListTile(
+        onTap: onTap,
+        leading: CircleAvatar(
+            backgroundColor: color.withOpacity(0.2),
+            child: Icon(icon, color: color)),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
       ),
     );
   }

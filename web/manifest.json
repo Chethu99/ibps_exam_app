@@ -1,6 +1,6 @@
 {
-    "name": "ibps_prep_app",
-    "short_name": "ibps_prep_app",
+    "name": "bankedge_prep_app",
+    "short_name": "bankedge_prep_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

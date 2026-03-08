@@ -1,0 +1,125 @@
+{
+ "questions":[
+  {
+   "question":"Which institution proposed new rules in 2026 to strengthen protection for customers against digital banking fraud?",
+   "options":["SEBI","RBI","NABARD","IRDAI"],
+   "answer":"RBI",
+   "explanation":"The Reserve Bank of India proposed updated guidelines to improve customer protection and faster complaint resolution in digital banking fraud cases."
+  },
+  {
+   "question":"Which digital currency initiative was piloted for food subsidy distribution in Puducherry in February 2026?",
+   "options":["UPI Token","Digital Rupee (e₹)","Bitcoin India","e-Wallet Subsidy"],
+   "answer":"Digital Rupee (e₹)",
+   "explanation":"India piloted a CBDC-based subsidy distribution using the Digital Rupee under the PM Garib Kalyan Anna Yojana program. :contentReference[oaicite:0]{index=0}"
+  },
+  {
+   "question":"Which organization manages India's foreign exchange reserves?",
+   "options":["Finance Ministry","RBI","SEBI","NITI Aayog"],
+   "answer":"RBI",
+   "explanation":"The Reserve Bank of India manages India's foreign exchange reserves and controls monetary policy."
+  },
+  {
+   "question":"India’s GDP growth projection for FY 2026-27 was estimated in the range of approximately:",
+   "options":["4–5%","5–6%","6.8–7.2%","8–9%"],
+   "answer":"6.8–7.2%",
+   "explanation":"Economic surveys and reports projected India's GDP growth around 6.8–7.2% for FY 2026-27. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+   "question":"Which organization regulates India's securities and stock market?",
+   "options":["RBI","SEBI","IRDAI","NABARD"],
+   "answer":"SEBI",
+   "explanation":"The Securities and Exchange Board of India (SEBI) regulates stock exchanges and protects investors."
+  },
+  {
+   "question":"Which scheme aims to improve financial inclusion through bank accounts in India?",
+   "options":["PMJDY","PMAY","PMFBY","PMGSY"],
+   "answer":"PMJDY",
+   "explanation":"Pradhan Mantri Jan Dhan Yojana (PMJDY) was launched to expand banking access and financial inclusion."
+  },
+  {
+   "question":"Which organization developed India's Unified Payments Interface (UPI)?",
+   "options":["RBI","NPCI","SBI","SEBI"],
+   "answer":"NPCI",
+   "explanation":"UPI was developed by the National Payments Corporation of India to enable instant digital payments."
+  },
+  {
+   "question":"Which international financial organization is headquartered in Washington D.C.?",
+   "options":["WHO","IMF","UNESCO","ADB"],
+   "answer":"IMF",
+   "explanation":"The International Monetary Fund (IMF) is headquartered in Washington D.C."
+  },
+  {
+   "question":"Which banking scheme allocates a lead bank for each district to improve credit flow and banking services?",
+   "options":["Lead Bank Scheme","Jan Dhan Scheme","Mudra Scheme","Stand Up India"],
+   "answer":"Lead Bank Scheme",
+   "explanation":"Under the Lead Bank Scheme, one bank takes responsibility for banking development in a district. :contentReference[oaicite:2]{index=2}"
+  },
+  {
+   "question":"Which global group of countries includes India and focuses on major economic cooperation?",
+   "options":["G7","G20","BRICS","ASEAN"],
+   "answer":"G20",
+   "explanation":"The G20 is a group of major economies working on global economic stability."
+  },
+
+  {
+   "question":"Which authority proposed stricter norms on bank lending to Real Estate Investment Trusts (REITs)?",
+   "options":["SEBI","RBI","NABARD","Finance Ministry"],
+   "answer":"RBI",
+   "explanation":"RBI proposed stricter lending rules for banks regarding REIT financing. :contentReference[oaicite:3]{index=3}"
+  },
+  {
+   "question":"Which corporation introduced a risk-based premium framework for deposit insurance in 2026?",
+   "options":["SIDBI","DICGC","NABARD","SEBI"],
+   "answer":"DICGC",
+   "explanation":"The Deposit Insurance and Credit Guarantee Corporation introduced a risk-based premium framework for deposit insurance. :contentReference[oaicite:4]{index=4}"
+  },
+  {
+   "question":"Which bank acts as the 'banker to banks' in India?",
+   "options":["SBI","RBI","ICICI Bank","Axis Bank"],
+   "answer":"RBI",
+   "explanation":"The RBI serves as the banker to other banks and regulates the banking system."
+  },
+  {
+   "question":"Which payment system allows instant money transfer using mobile devices in India?",
+   "options":["RTGS","UPI","SWIFT","NEFT"],
+   "answer":"UPI",
+   "explanation":"UPI allows real-time bank transfers using smartphones."
+  },
+  {
+   "question":"Which ministry presents the Union Budget of India?",
+   "options":["Home Ministry","Finance Ministry","Defence Ministry","Commerce Ministry"],
+   "answer":"Finance Ministry",
+   "explanation":"The Union Budget is presented by the Finance Minister in Parliament."
+  },
+  {
+   "question":"Which body supervises insurance companies in India?",
+   "options":["IRDAI","RBI","SEBI","NABARD"],
+   "answer":"IRDAI",
+   "explanation":"Insurance Regulatory and Development Authority of India regulates insurance companies."
+  },
+  {
+   "question":"Which organization focuses on rural development banking in India?",
+   "options":["RBI","NABARD","SEBI","SIDBI"],
+   "answer":"NABARD",
+   "explanation":"National Bank for Agriculture and Rural Development supports agriculture and rural finance."
+  },
+  {
+   "question":"Which initiative promotes digital payments growth in India?",
+   "options":["Digital India","Make in India","Skill India","Startup India"],
+   "answer":"Digital India",
+   "explanation":"Digital India encourages digital infrastructure and online services including digital payments."
+  },
+  {
+   "question":"Which bank introduced India's first solar-powered ATM van?",
+   "options":["SBI","Tripura Gramin Bank","Axis Bank","ICICI Bank"],
+   "answer":"Tripura Gramin Bank",
+   "explanation":"Tripura Gramin Bank launched India's first solar-powered ATM van to improve rural banking access. :contentReference[oaicite:5]{index=5}"
+  },
+  {
+   "question":"Which organization monitors inflation and sets key interest rates in India?",
+   "options":["SEBI","RBI","Finance Ministry","NITI Aayog"],
+   "answer":"RBI",
+   "explanation":"RBI controls interest rates through monetary policy decisions."
+  }
+ ]
+}

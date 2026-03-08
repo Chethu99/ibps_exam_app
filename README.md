@@ -1,4 +1,4 @@
-# ibps_prep_app
+# bankedge_prep_app
 
 A new Flutter project.
 

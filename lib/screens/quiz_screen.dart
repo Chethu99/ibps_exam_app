@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
-import '../models/question.dart';
-import '../services/quiz_service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuizScreen extends StatefulWidget {
-
+  final String exam;
+  final String stage;
   final String subject;
 
-  const QuizScreen({super.key, required this.subject});
+  const QuizScreen({
+    super.key,
+    required this.exam,
+    required this.stage,
+    required this.subject,
+  });
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-
-  List<Question> questions = [];
-  int index = 0;
-  int score = 0;
-  int? selected;
-
-  int seconds = 20;
+  List<Map<String, dynamic>> questions = [];
+  int currentQuestionIndex = 0;
+  bool isLoading = true;
+  bool answered = false;
+  String? selectedOption;
+  String? errorMessage;
 
   @override
   void initState() {
@@ -27,203 +31,215 @@ class _QuizScreenState extends State<QuizScreen> {
     loadQuestions();
   }
 
-  void loadQuestions() async {
+  Future<void> loadQuestions() async {
+    try {
+      // Debug prints: Check your console to see if these match your Firestore exactly!
+      print(
+          "Fetching: Exam: ${widget.exam}, Stage: ${widget.stage}, Subject: ${widget.subject}");
 
-    questions = await QuizService().fetchQuestions(widget.subject);
+      final snapshot = await FirebaseFirestore.instance
+          .collection("Questions")
+          .where("exam", isEqualTo: widget.exam)
+          .where("stage", isEqualTo: widget.stage)
+          .where("subject", isEqualTo: widget.subject)
+          .get();
 
-    startTimer();
-
-    setState(() {});
-  }
-
-  void startTimer() {
-
-    Future.delayed(const Duration(seconds: 1), () {
-
-      if (!mounted) return;
-
-      if (seconds > 0) {
-
+      if (snapshot.docs.isEmpty) {
         setState(() {
-          seconds--;
+          questions = [];
+          isLoading = false;
         });
-
-        startTimer();
-
-      } else {
-
-        nextQuestion();
+        return;
       }
-    });
+
+      setState(() {
+        questions = snapshot.docs.map((doc) => doc.data()).toList();
+        isLoading = false;
+      });
+    } catch (e) {
+      print("Firestore Error: $e");
+      setState(() {
+        errorMessage = e.toString();
+        isLoading = false;
+      });
+    }
   }
 
-  void selectAnswer(int optionIndex) {
+  Color getOptionColor(String option) {
+    if (!answered) return Colors.white;
 
-    if (selected != null) return;
+    String correctAnswer = questions[currentQuestionIndex]["answer"];
 
-    setState(() {
-      selected = optionIndex;
-    });
-
-    final correct = questions[index].answer;
-
-    if (questions[index].options[optionIndex] == correct) {
-      score++;
+    if (option == correctAnswer) {
+      return Colors.green.shade200;
     }
 
-    Future.delayed(const Duration(seconds: 1), () {
-      nextQuestion();
-    });
+    if (option == selectedOption && option != correctAnswer) {
+      return Colors.red.shade200;
+    }
+
+    return Colors.white;
   }
 
   void nextQuestion() {
-
-    if (index < questions.length - 1) {
-
+    if (currentQuestionIndex < questions.length - 1) {
       setState(() {
-        index++;
-        selected = null;
-        seconds = 20;
+        currentQuestionIndex++;
+        answered = false;
+        selectedOption = null;
       });
-
-      startTimer();
-
     } else {
-
-      showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-          title: const Text("Quiz Finished"),
-          content: Text("Your score: $score / ${questions.length}"),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-                Navigator.pop(context);
-              },
-              child: const Text("Back"),
-            )
-          ],
-        ),
-      );
+      showCompletionDialog();
     }
+  }
+
+  void showCompletionDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => AlertDialog(
+        title: const Text("Quiz Finished"),
+        content:
+            const Text("You have completed all questions in this section."),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // Close dialog
+              Navigator.pop(context); // Go back to previous screen
+            },
+            child: const Text("OK"),
+          )
+        ],
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-
-    if (questions.isEmpty) {
+    // 1. Loading State
+    if (isLoading) {
       return const Scaffold(
         body: Center(child: CircularProgressIndicator()),
       );
     }
 
-    final q = questions[index];
-    final correct = q.answer;
+    // 2. Error State (like missing indexes)
+    if (errorMessage != null) {
+      return Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text("Error: $errorMessage", textAlign: TextAlign.center),
+          ),
+        ),
+      );
+    }
 
-    double progress = (index + 1) / questions.length;
+    // 3. Empty State (No questions found)
+    if (questions.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: const Text("Quiz")),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.search_off, size: 60, color: Colors.grey),
+              const SizedBox(height: 10),
+              Text("No questions found for ${widget.subject}"),
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text("Go Back"),
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    var question = questions[currentQuestionIndex];
 
     return Scaffold(
-
-      backgroundColor: const Color(0xfff5f7fb),
-
       appBar: AppBar(
-        title: const Text("Mock Test"),
-        centerTitle: true,
+        title: Text(widget.subject.replaceAll("_", " ").toUpperCase()),
       ),
-
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            LinearProgressIndicator(
-              value: progress,
-              minHeight: 8,
+            Text(
+              "Question ${currentQuestionIndex + 1} / ${questions.length}",
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
-
-            const SizedBox(height: 10),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Question ${index + 1}/${questions.length}"),
-                Text("Time: $seconds"),
-              ],
-            ),
-
             const SizedBox(height: 20),
-
-            Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Text(
-                  q.question,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+            Text(
+              question["question"] ?? "No Question Text",
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 30),
+            // Options List
+            ...(question["options"] as List).map<Widget>((option) {
+              return GestureDetector(
+                onTap: () {
+                  if (answered) return;
+                  setState(() {
+                    selectedOption = option;
+                    answered = true;
+                  });
+                },
+                child: Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(bottom: 15),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: getOptionColor(option),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.grey.shade300),
+                  ),
+                  child: Text(
+                    option,
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ),
-              ),
-            ),
-
+              );
+            }).toList(),
             const SizedBox(height: 20),
-
-            Expanded(
-              child: ListView.builder(
-                itemCount: q.options.length,
-                itemBuilder: (context, i) {
-
-                  Color color = Colors.white;
-
-                  if (selected != null) {
-
-                    if (q.options[i] == correct) {
-                      color = Colors.green.shade300;
-                    } else if (i == selected) {
-                      color = Colors.red.shade300;
-                    }
-                  }
-
-                  return AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    margin: const EdgeInsets.only(bottom: 12),
-
-                    child: Material(
-                      color: color,
-                      borderRadius: BorderRadius.circular(12),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(12),
-                        onTap: () => selectAnswer(i),
-
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Text(
-                            q.options[i],
-                            style: const TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ),
+            // Explanation Section
+            if (answered) ...[
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Explanation:",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 5),
+                    Text(
+                      question["explanation"] ?? "No explanation provided.",
+                      style: const TextStyle(fontSize: 16),
                     ),
-                  );
-                },
+                  ],
+                ),
               ),
-            ),
-
-            const SizedBox(height: 10),
-
-            Text(
-              "Score: $score",
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+              const SizedBox(height: 30),
+              Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 15),
+                  ),
+                  onPressed: nextQuestion,
+                  child: Text(currentQuestionIndex < questions.length - 1
+                      ? "Next Question"
+                      : "Finish Quiz"),
+                ),
               ),
-            ),
-
+            ],
           ],
         ),
       ),

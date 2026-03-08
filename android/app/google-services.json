@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "516144800433",
+    "project_id": "competitive-exams-4d416",
+    "storage_bucket": "competitive-exams-4d416.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516144800433:android:059ff21ce4d4054fd1f890",
+        "android_client_info": {
+          "package_name": "com.bankedge.company"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516144800433-i1scqptikvsigcrfvgnqkmt4c73t13hn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bankedge.company",
+            "certificate_hash": "8086708d877222a2aa6723f41ffd6b3f46bb6ba3"
+          }
+        },
+        {
+          "client_id": "516144800433-iiks43lliutvuvb5n06higi2ni5jo6i7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bankedge.company",
+            "certificate_hash": "4444305912270e105450fd44e2e913a66502ed3b"
+          }
+        },
+        {
+          "client_id": "516144800433-oe61mqinbkndjh0radc7i7f6ae6eof9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO3ZOr1rXCIni79q2rxk25IbfGzLDPX9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516144800433-oe61mqinbkndjh0radc7i7f6ae6eof9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

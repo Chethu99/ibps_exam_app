@@ -2,57 +2,60 @@ import 'package:flutter/material.dart';
 import 'subject_screen.dart';
 
 class ExamStageScreen extends StatelessWidget {
+  final String exam;
 
-  final String examName;
-
-  const ExamStageScreen({super.key, required this.examName});
+  const ExamStageScreen({super.key, required this.exam});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        title: Text(examName),
+        title: Text(exam.toUpperCase()),
       ),
-
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
-
-          stageTile(context, "Prelims"),
-
-          stageTile(context, "Mains"),
-
+          stageTile(
+            context,
+            title: "Prelims",
+            stage: "prelims",
+          ),
+          stageTile(
+            context,
+            title: "Mains",
+            stage: "mains",
+          ),
         ],
       ),
     );
   }
 
-  Widget stageTile(BuildContext context, String stage) {
-
+  Widget stageTile(
+    BuildContext context, {
+    required String title,
+    required String stage,
+  }) {
     return Card(
       margin: const EdgeInsets.only(bottom: 15),
-
       child: ListTile(
         title: Text(
-          stage,
+          title,
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
         ),
-
         trailing: const Icon(Icons.arrow_forward_ios),
-
         onTap: () {
-
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (_) => const SubjectScreen(),
+              builder: (_) => SubjectScreen(
+                exam: exam,
+                stage: stage,
+              ),
             ),
           );
-
         },
       ),
     );
